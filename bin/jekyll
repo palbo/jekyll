@@ -100,6 +100,8 @@ def globs(source)
   end
 end
 
+Dir["#{source}/_ext/**/*.rb"].each { |f| load f; }
+
 # Create the Site
 site = Jekyll::Site.new(options)
 
